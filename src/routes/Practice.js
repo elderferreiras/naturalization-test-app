@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { shuffle } from 'lodash'
 import { Row, Col, Button } from 'react-bootstrap'
 
-import { questions as civicsTest } from '../data/civics.test';
+import { questions as civicsTest } from '../data/civics.exam';
 import Card from '../components/Card';
 
 const Practice = () => {
