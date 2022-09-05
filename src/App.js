@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import { Amplify } from 'aws-amplify';
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
+import { Container } from 'react-bootstrap'
+import React from 'react'
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import { Routes, Route, Link } from "react-router-dom";
+import '@aws-amplify/ui-react/styles.css';
+import awsExports from './aws-exports';
 import './App.css';
+import Simulate from './routes/Simulate';
+import Practice from './routes/Practice';
+import Home from './routes/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+Amplify.configure(awsExports);
+
+class App extends React.Component {
+  render() {
+    const { user } = this.props;
+
+    const routes = (
+      <Routes>
+        <Route path="/simulate" element={<Simulate user={user} />} />
+        <Route path="/practice" element={<Practice user={user} />} />
+        <Route path="/" element={<Home user={user} />} />
+      </Routes>
+    );
+
+    return (
+      <ThemeProvider>
+        <Container>
+          {routes}
+        </Container>
+      </ThemeProvider>
+    );
+  }
 }
 
-export default App;
+export default withAuthenticator(App);
