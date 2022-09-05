@@ -7,14 +7,10 @@ import {connect} from 'react-redux';
 import '@aws-amplify/ui-react/styles.css';
 import { fetchUser, updateUser } from '../store/user/actions';
 import LocalityForm from '../components/LocalityForm';
-import Simulate from '../routes/Simulate';
-import Practice from '../routes/Practice';
-import Say from 'react-say';
-
 
 class Home extends React.Component {
   componentDidMount() {
-    const { getData, user } = this.props
+    const { getData, user } = this.props;
 
     getData(user.username)
   }
