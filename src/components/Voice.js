@@ -7,7 +7,7 @@ import { includes } from 'lodash'
 const Voice = ({ question, answers, visible, logCorrectAnswer }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isCorrect, setIsCorrect] = useState(null);
-  const [utterance, setUtterance] = useState(new SpeechSynthesisUtterance(question))
+  const [utterance,setUtterance] = useState()
 
   const {
     transcript,
@@ -18,6 +18,7 @@ const Voice = ({ question, answers, visible, logCorrectAnswer }) => {
 
   useEffect(() => {
     setIsFlipped(false)
+    setUtterance(new SpeechSynthesisUtterance(question))
   }, [question]);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const Voice = ({ question, answers, visible, logCorrectAnswer }) => {
       utterance.rate = 0.9
       speechSynthesis.speak(utterance)
     }
-  }, [visible])
+  }, [visible, utterance])
 
   if (!browserSupportsSpeechRecognition) {
     return <span>Browser doesn't support speech recognition.</span>;

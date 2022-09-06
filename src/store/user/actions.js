@@ -1,6 +1,6 @@
 import * as actionTypes from "../actionTypes";
 import {
-  fetchUser as fetchUserData,
+  fetchUser as fetchUserData, signOut,
   updateUser as updateUserData,
 } from '../../services/user.api'
 
@@ -62,6 +62,15 @@ export const updateUser = (username, values) => {
       dispatch(fetchUserSuccess(value || {}))
     }).catch(err => {
       dispatch(updateUserFail(err));
+    });
+  }
+};
+
+
+export const signoutUser = () => {
+  return () => {
+    signOut().catch(err => {
+      console.log("Err signing out: ", err)
     });
   }
 };

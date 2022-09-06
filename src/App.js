@@ -10,6 +10,7 @@ import './App.css'
 import Simulate from './routes/Simulate'
 import Practice from './routes/Practice'
 import Home from './routes/Home'
+import Navigation from './components/Navbar';
 
 Amplify.configure(awsExports)
 
@@ -28,6 +29,7 @@ class App extends React.Component {
     return (
       <ThemeProvider>
         <Container>
+         <Navigation user={user} />
           {routes}
         </Container>
       </ThemeProvider>
