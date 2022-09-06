@@ -8435,6 +8435,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"citizinterview@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "citizinterview@workspace:."
+  dependencies:
+    "@aws-amplify/ui-react": ^3.5.0
+    "@fortawesome/fontawesome-svg-core": ^6.2.0
+    "@fortawesome/free-solid-svg-icons": ^6.2.0
+    "@fortawesome/react-fontawesome": ^0.2.0
+    "@testing-library/jest-dom": ^5.14.1
+    "@testing-library/react": ^13.0.0
+    "@testing-library/user-event": ^13.2.1
+    aws-amplify: ^4.3.34
+    bootstrap: ^5.2.0
+    classnames: ^2.3.1
+    localforage: ^1.10.0
+    lodash: ^4.17.21
+    react: ^18.2.0
+    react-bootstrap: ^2.5.0
+    react-card-flip: ^1.1.5
+    react-dom: ^18.2.0
+    react-redux: ^8.0.2
+    react-router-dom: 6
+    react-say: ^2.1.0
+    react-scripts: 5.0.1
+    react-speech-recognition: ^3.9.1
+    redux: ^4.2.0
+    redux-thunk: ^2.4.1
+    sass: ^1.54.8
+    web-vitals: ^2.1.0
+  languageName: unknown
+  linkType: soft
+
 "cjs-module-lexer@npm:^1.0.0":
   version: 1.2.2
   resolution: "cjs-module-lexer@npm:1.2.2"
@@ -13302,38 +13334,6 @@ __metadata:
   checksum: 23ad088b08f898fc9b53011d7bb78ec48e79de7627e01ab5518e806033861bef68d5b0cd0e2205c2f36690ac9571ff6bcb05eb777ced2eeda8d4ac5b44592c3d
   languageName: node
   linkType: hard
-
-"naturalization-test-app@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "naturalization-test-app@workspace:."
-  dependencies:
-    "@aws-amplify/ui-react": ^3.5.0
-    "@fortawesome/fontawesome-svg-core": ^6.2.0
-    "@fortawesome/free-solid-svg-icons": ^6.2.0
-    "@fortawesome/react-fontawesome": ^0.2.0
-    "@testing-library/jest-dom": ^5.14.1
-    "@testing-library/react": ^13.0.0
-    "@testing-library/user-event": ^13.2.1
-    aws-amplify: ^4.3.34
-    bootstrap: ^5.2.0
-    classnames: ^2.3.1
-    localforage: ^1.10.0
-    lodash: ^4.17.21
-    react: ^18.2.0
-    react-bootstrap: ^2.5.0
-    react-card-flip: ^1.1.5
-    react-dom: ^18.2.0
-    react-redux: ^8.0.2
-    react-router-dom: 6
-    react-say: ^2.1.0
-    react-scripts: 5.0.1
-    react-speech-recognition: ^3.9.1
-    redux: ^4.2.0
-    redux-thunk: ^2.4.1
-    sass: ^1.54.8
-    web-vitals: ^2.1.0
-  languageName: unknown
-  linkType: soft
 
 "negotiator@npm:0.6.3, negotiator@npm:^0.6.3":
   version: 0.6.3
