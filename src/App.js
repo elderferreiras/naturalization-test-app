@@ -11,6 +11,7 @@ import Simulate from './routes/Simulate'
 import Practice from './routes/Practice'
 import Home from './routes/Home'
 import Navigation from './components/Navbar';
+import Signout from './components/Signout';
 
 Amplify.configure(awsExports)
 
@@ -22,6 +23,7 @@ class App extends React.Component {
       <Routes>
         <Route path="/simulate" element={<Simulate user={user} />} />
         <Route path="/practice" element={<Practice user={user} />} />
+        <Route path="/signout" element={<Signout />} />
         <Route path="/" element={<Home user={user} />} />
       </Routes>
     )

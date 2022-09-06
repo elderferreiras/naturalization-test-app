@@ -22,7 +22,7 @@ const Voice = ({ question, answers, visible, logCorrectAnswer }) => {
   }, [question]);
 
   useEffect(() => {
-    if (visible) {
+    if (visible && utterance) {
       utterance.rate = 0.9
       speechSynthesis.speak(utterance)
     }
