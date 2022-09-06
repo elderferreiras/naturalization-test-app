@@ -13,6 +13,7 @@ import Home from './routes/Home'
 import Navigation from './components/Navbar';
 import Signout from './components/Signout';
 import Login from './components/Login'
+import PrivacyPolicy from './routes/PrivacyPolicy';
 
 Amplify.configure(awsExports)
 
@@ -20,7 +21,12 @@ const App = () => {
   const { user } = useAuthenticator();
 
   if (!user) {
-    return <Login />
+    return (
+      <Routes>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/" element={<Login />} />
+      </Routes>
+    )
   }
 
   const routes = (
